@@ -1,0 +1,14 @@
+@use "@angular/material" as mat;
+@use "styles/light";
+
+@include mat.core();
+@include mat.all-component-themes(light.$project-light-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

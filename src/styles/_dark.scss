@@ -1,0 +1,19 @@
+@use "../../node_modules/@angular/material/index" as mat;
+
+$project-dark-primary: mat.define-palette(mat.$blue-gray-palette);
+$project-dark-accent: mat.define-palette(mat.$amber-palette);
+$project-dark-warn: mat.define-palette(mat.$deep-orange-palette);
+
+$project-dark-theme: mat.define-dark-theme(
+    (
+      color: (
+        primary: $project-dark-primary,
+        accent: $project-dark-accent,
+        warn: $project-dark-warn,
+      ),
+    )
+);
+
+.dark-theme {
+  @include mat.all-component-themes($project-dark-theme);
+}
